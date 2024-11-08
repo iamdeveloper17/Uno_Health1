@@ -1,0 +1,767 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+#main{
+    height: 100vh;
+    width: 100%;
+}
+
+#header{
+    height: 100vh;
+    width: 100%;
+}
+
+#navbar{
+    background-color: rgb(236, 236, 236);
+    height: 15vh;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#logo{
+    width: 40%;
+    /* background-color: red; */
+    font-size: 3vw;
+    font-weight: bold;
+    color: teal;
+}
+
+#links{
+    width: 60%;
+}
+
+#menu{
+    display: none;
+}
+
+#links ul li{
+    list-style-type: none;
+}
+
+#links ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.4vw;
+    font-weight: 400;
+    /* color: teal; */
+    padding: 6.3vh 0;
+    /* background-color: red; */
+}
+
+#links ul{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+#services, #news{
+    position: relative;
+    z-index: 1;
+}
+
+#links ul li a:hover{
+    /* border-bottom: 5px solid teal; */
+    color: teal;
+}
+
+#services:hover #service_dropdown{
+    display: block !important;
+}
+
+#news:hover #news_dropdown{
+    display: block !important;
+}
+
+#service_dropdown, #news_dropdown{
+    background-color: rgb(236, 236, 236);
+    position: absolute;
+    top: 9vh;
+    left: 0;
+    flex-direction: column;
+    display: none !important;
+    white-space: nowrap;
+}
+
+#service_dropdown li{
+    width: 100% !important;
+    /* background-color: red; */
+}
+
+#service_dropdown li a, #news_dropdown li a{
+    /* background-color: rgb(180, 180, 180); */
+    padding: 1vw !important;
+    width: 100% !important;
+    display: inline-block;
+    font-size: 1.3vw !important;
+    border: 0 !important;
+    color: grey !important;
+}
+
+#service_dropdown li a:hover, #news_dropdown li a:hover{
+    background-color: teal;
+    color: rgb(228, 228, 228) !important;
+}
+
+#section{
+    width: 100%;
+    height: 85vh;
+    background-image: url('/images/1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -3;
+}
+
+.section_first{
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    height: 100%;
+    position: relative;
+}
+
+.section_second{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 15%;
+}
+
+.section_second h1{
+    font-size: 5vw;
+    font-weight: 400;
+    color: white;
+}
+
+.section_second p{
+    font-size: 1.6vw;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(235, 235, 235);
+    margin: 10px 0 30px 0;
+}
+
+.section_second a{
+    font-size: 1.6vw;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+    padding: 1.4vw 2vw;
+    border-radius: 10px;
+}
+
+#gallery{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 235, 235);
+}
+
+#gallery h1, #machine h1{
+    font-size: 5vw;
+    text-align: center;
+    font-weight: 400;
+    color: teal;
+}
+
+#gallery_section{
+    width: 80%;
+    margin-left: 10%;
+    padding: 10vh 0;
+}
+
+#gallery_image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    margin-top: 10vh;
+}
+
+#gallery_image a{
+    height: 50vh;
+    width: calc(25% - 20px);
+    overflow: hidden;
+    box-shadow: 4px 4px 10px grey;
+}
+
+#gallery_image a img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#gallery_image a:hover img{
+    scale: 1.2;
+    transition: ease-in-out .4s all;
+}
+
+#machine{
+    width: 100%;
+    height: 100vh;
+    padding: 10vh 0;
+    /* background-color: rgb(215, 250, 242); */
+}
+
+#machine_details{
+    width: 80%;
+    margin-left: 10%;
+    padding: 10vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: azure; */
+}
+
+#machine_details div{
+    width: calc(50% - 20px);
+    padding: 20px;
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+#machine_details div img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 4px 10px grey;
+}
+
+#machine_image{
+    /* height: 50vw; */
+}
+
+#about_machine h2{
+    font-size: 3vw;
+    font-weight: 400;
+    color: teal;
+}
+
+#about_machine p{
+    font-size: 1vw;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: grey;
+}
+
+#about_machine a{
+    text-decoration: none;
+    font-size: 1.2vw;
+    padding: .6vw 1vw;
+    border-radius: 10px;
+    border: 1px solid teal;
+    background-color: teal;
+    color: whitesmoke;
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+}
+
+#about_img{
+    height: 30vw;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#about_img img{
+    width: fit-content;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 4px 4px 10px grey;
+}
+
+#about_container{
+    width: 80%;
+    margin-left: 10%;
+    padding: 5vh 0;
+}
+
+#about_container h1{
+    color: teal;
+    font-size: 4vw;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#about_details p{
+    font-size: 1.2vw;
+    color: grey;
+}
+
+#footer{
+    width: 100%;
+    height: 100vh;
+}
+
+#footer #form{
+    width: 80%;
+    height: 50vh;
+    margin-left: 10%;
+    /* background-color: rgb(216, 216, 216); */
+}
+
+#form form{
+    height: 80%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#form{
+    text-align: center;
+}
+
+#form form div{
+    width: calc(50% - 10px);
+    /* background-color: blue; */
+    padding: 2vh 0;
+}
+
+#footer #footer_panel{
+    width: 100%;
+    height: 50vh;
+    background-color: lightgrey;
+}
+
+#form_input{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#form_input input{
+    font-size: 1.3vw;
+    font-weight: 400;
+    padding: 1vw;
+    outline: 0;
+    border-radius: 10px;
+    height: 20%;
+    border: 0;
+    background-color: rgb(216, 216, 216)
+}
+
+#form_message textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    outline: 0;
+    font-size: 1.3vw;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(216, 216, 216);
+    /* color: teal; */
+}
+
+#submit{
+    font-size: 1.3vw;
+    padding: 0.5vw 2vw;
+    background-color: teal;
+    border: 2px solid teal;
+    color: rgb(216, 216, 216);
+    border-radius: 5px;
+}
+
+#footer_panel_container{
+    display: flex;
+    width: 80%;
+    /* background-color: lightgrey; */
+    margin-left: 10%;
+}
+
+#footer_panel_container div{
+    width: calc(25% - 20px);
+    /* background-color: red; */
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+#footer_panel_container div h2{
+    height: 25%;
+    font-size: 1.2vw;
+    color: teal;
+}
+
+#footer_panel_container div a{
+    text-decoration: none;
+    color: grey;
+    font-size: 0.9vw;
+}
+
+#footer_panel_container div a:hover{
+    color: teal;
+}
+
+#footer_panel_container p{
+    /* text-decoration: none; */
+    color: grey;
+    margin-bottom: 10px;
+    font-size: 0.9vw;
+}
+
+#footer_panel4 img{
+    width: 40px;
+}
+
+#footer_panel_container div a i{
+    font-size: 20px;
+}
+
+/* Tab View Responsive Website */
+
+@media screen and (max-width: 768px) {
+    #navbar{
+        background-color: rgb(236, 236, 236);
+    }
+    
+    nav{
+        display: flex;
+    }
+    
+    #logo{
+        width: 40%;
+        font-size: 4.5vw;
+    }
+    
+    #links{
+        display: none;
+        position: absolute;
+        top: 15vh;
+        left: 10%;
+        background-color: rgb(236, 236, 236);
+        width: 80%;
+        height: fit-content;
+        z-index: 999;
+    }
+
+    #menu{
+        display: block;
+        font-size: 4.5vw;
+        position: relative;
+    }
+
+    #menu:hover{
+        cursor: pointer;
+    }
+    
+    #links ul li a{
+        font-size: 2vw;
+        width: 100% !important;
+        display: inline-block;
+        padding: 1.4vh 1vh;
+        /* margin: 2px 0; */
+    }
+    
+    #links ul{
+        flex-direction: column;
+    }
+
+    #links ul li a:hover{
+        background-color: teal;
+        color: rgb(236, 236, 236);
+    }
+    
+    #services:hover #service_dropdown, #news:hover #news_dropdown{
+        display: block !important;
+    }
+    
+    #service_dropdown, #news_dropdown{
+        background-color: rgb(207, 206, 206);
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    #service_dropdown li, #news_dropdown li{
+        margin: 0 !important;
+    }
+    
+    #service_dropdown li a, #news_dropdown li a{
+        width: 100% !important;
+        font-size: 2vw !important;
+        padding: 1.4vh 1vh !important;
+    }
+    
+    .section_second{
+        padding: 0;
+    }
+    
+    .section_second p{
+        font-size: 2vw;
+    }
+    
+    .section_second a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+    }
+
+    #gallery{
+        padding: 10vh 0;
+    }
+    
+    #gallery h1, #machine h1{
+        font-size: 5vw;
+        margin-bottom: 30px;
+    }
+
+    #gallery_image{
+        display: flex;
+        margin-top: 0;
+    }
+
+    #gallery_section{
+        padding: 0;
+    }
+    
+    #gallery_image a{
+        height: 30vh;
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    
+    #gallery_image a img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #machine{
+        padding: 10vh 0;
+    }
+    
+    #machine_details{
+        padding: 0;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #machine_details div{
+        width: 100%;
+        padding: 10px !important;
+    }
+
+    #machine_image{
+        height: 40vh;
+    }
+    
+    #about_machine h2{
+        font-size: 3.3vw;
+    }
+    
+    #about_machine p{
+        font-size: 1.5vw;
+        margin-bottom: 10px;
+    }
+
+    #about_machine p:nth-child(4){
+        margin-bottom: 20px;
+    }
+    
+    #about_machine a{
+        font-size: 1.6vw;
+        padding: 1vw 2vw;
+        border-radius: 5px;
+    }
+
+    #about{
+        padding: 10vh 0;
+    }
+    
+    #about_img{
+        height: 40vh;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    #about_container{
+        padding: 0;
+    }
+    
+    #about_container h1{
+        font-size: 5vw;
+        margin-bottom: 30px;
+    }
+    
+    #about_details p{
+        font-size: 1.5vw;
+    }
+    
+    #form form div{
+        padding: 4vh 0;
+    }
+    
+    #form_input input{
+        font-size: 1.4vw;
+        padding: 2vw;
+    }
+    
+    #form_message textarea{
+        padding: 2vw;
+        font-size: 1.4vw;
+    }
+    
+    #submit{
+        font-size: 1.4vw;
+    }
+    
+    #footer_panel_container div{
+        width: calc(25% - 20px);
+    }
+    
+    #footer_panel_container div h2{
+        font-size: 1.4vw;
+    }
+    
+    #footer_panel_container p{
+        margin-bottom: 5px;
+        font-size: 1vw;
+    }
+    
+    #footer_panel4 img{
+        width: 3vw;
+    }
+    
+    #footer_panel_container div a i{
+        font-size: 1.8vw;
+    }
+}
+
+/* Mobile View Responsive Website */
+
+@media screen and (max-width: 480px) {
+    #navbar{
+        background-color: rgb(236, 236, 236);
+    }
+    
+    #logo{
+        width: 60%;
+        font-size: 6.5vw;
+    }
+
+    #menu{
+        font-size: 6.5vw;
+    }
+    
+    #links ul li a{
+        font-size: 3vw;
+    }
+    
+    #service_dropdown li a, #news_dropdown li a{
+        font-size: 2.8vw !important;
+    }
+
+    .section_second h1{
+        font-size: 6.5vw;
+    }
+    
+    .section_second p{
+        font-size: 3vw;
+    }
+    
+    .section_second a{
+        font-size: 3vw;
+        padding: 2.5vw 4vw;
+    }
+    
+    #gallery h1, #machine h1{
+        font-size: 6.5vw;
+    }
+    
+    #machine_details{
+        flex-direction: column;
+    }
+    
+    #machine_details div{
+        width: 100%;
+    }
+    
+    #about_machine h2{
+        font-size: 4.5vw;
+    }
+    
+    #about_machine p{
+        font-size: 1.7vw;
+    }
+
+    #about_machine p:nth-child(4){
+        margin-bottom: 10px;
+    }
+    
+    #about_machine a{
+        font-size: 1.8vw;
+    }
+    
+    #about_container h1{
+        font-size: 6.5vw;
+    }
+    
+    #about_details p{
+        font-size: 2vw;
+    }
+
+    #form form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form form div{
+        width: 100%;
+        /* background-color: red; */
+        padding: 2vh 0;
+    }
+    
+    #form_message textarea{
+        font-size: 2vw;
+        padding: 3vw 2vw;
+    }
+
+    #form_input input{
+        font-size: 2vw;
+        padding: 3vw 2vw;
+        height: 30%;
+    }
+    
+    #submit{
+        font-size: 2vw;
+    }
+    
+    #footer_panel_container div{
+        width: calc(25% - 10px);
+    }
+    
+    #footer_panel_container div h2{
+        font-size: 1.5vw;
+    }
+    
+    #footer_panel_container p{
+        margin-bottom: 3px;
+        font-size: 1.3vw;
+    }
+    
+    #footer_panel4 img{
+        width: 3vw;
+    }
+    
+    #footer_panel_container div a i{
+        font-size: 1.8vw;
+    }
+}
